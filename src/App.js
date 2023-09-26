@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'tippy.js/dist/tippy.css'; // optional for styling
+import Nav from './Nav';
+import Input from './Input';
+import Body from './Body';
+
+import Footer from './Footer';
+import ElementContext from './ElementContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ElementContext>
+    <Nav></Nav>
+    <Input></Input>
+    <Body></Body>
+    <Footer></Footer>
+
+    </ElementContext>
+    </>
   );
 }
 

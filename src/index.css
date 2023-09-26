@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.input_section {
+  padding: 2px 2px;
+  border: 1px solid gray;
+  border-radius: 2px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input_button{
+  padding: 2px 2px;
+  border: 1px solid rgb(9, 78, 189);
+  background-color: #ffffff;
+  color: rgb(9, 78, 189);
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+
 }
+
+.input_button:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+
+.edit_button{
+  padding: 2px 2px;
+  border: 1px solid rgb(9, 78, 189);
+  background-color: #ffffff;
+  color: rgb(9, 78, 189);
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+
+}
+
+.main_row{
+  border: 1px solid gray;
+  height: auto;
+}
+
+.display_column {
+  border: 1px solid gray;
+  width: auto;
+  height: 650px;
+  background-color: rgb(253, 253, 253);
+  
+}
+
+.edit_column {
+  text-align: center;
+}
+
+.edit_search{
+  color: rgb(9, 78, 189);
+  background-color: ghostwhite;
+  border: 1px solid  #0f0e0e;
+}
+
+.edit_{
+  color: rgb(9, 78, 189);
+  background-color: ghostwhite;
+  border: 1px solid  #0f0e0e;
+  margin: 2px;
+  text-align: left;
+
+  
+}
+
+.tippy-box{
+  border: 1px solid rgb(9, 78, 189);
+}
+
+.node_info {
+  font-size: 12px;
+  color: rgb(41, 93, 9);
+}
+
+.layout_menu{
+  padding: 2px 2px;
+  border: 1px solid rgb(9, 78, 189);
+  background-color: #ffffff;
+  color: rgb(9, 78, 189);
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+
+}
+
+.layout_menu:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+
+/* Style for the button in drop down menu*/
+.layout_button{
+  width: 100%;
+  margin-bottom: 8px;
+  transition: 'box-shadow 0.3s ease';
+
+}
+.layout_button:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+

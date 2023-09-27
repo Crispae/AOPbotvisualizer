@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { TfiCloudUp,TfiCloudDown,TfiSave,TfiReload} from "react-icons/tfi";
 import { useElementContext } from './ElementContext';
 import Drop from './Drop';
+import DisplayName from './DisplayName';
 
 
 function Input() {
@@ -89,6 +90,10 @@ function uploadFile(event) {
         <Col>
         <button className='input_button' onClick={()=>{setReset(!reset)}}><TfiReload></TfiReload> Reset </button>
         </Col>
+
+        {/** Drop Down menu to show node naming option*/}
+        <DisplayName></DisplayName>
+
 
       </Row>
 

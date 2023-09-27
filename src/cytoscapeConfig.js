@@ -1,4 +1,7 @@
-// cytoscapeConfig.
+/** Config file for cytoscape js
+ * Styling of nodes and edges configured
+ * 
+ */
 
 var chemical_entity = ["chemical","Chemical","Chemical Entity"];
 var gene_entity = ["gene","Gene","Protein","protein","Gene Product","gene/protein"];
@@ -88,8 +91,6 @@ style: [
            },
 
        ],
-
-    
 
 layout: {
            name: 'random',

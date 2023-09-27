@@ -104,3 +104,37 @@
   font-weight: bold;
 }
 
+
+/* styles for the edge content*/
+/* Add your custom CSS styles here */
+#edge_tb {
+  border-collapse: collapse;
+  width: 100%;
+}
+#edge_tb, #edge_tb th, #edge_tb td {
+  border: 1px solid #ccc;
+}
+#edge_tb th {
+  background-color: #f2f2f2;
+  color: gray;
+  padding: 10px;
+  text-align: left;
+  position: relative; /* Add this to make it relative */
+}
+#edge_tb th .buttons {
+  position: absolute; /* Position buttons absolutely within the th */
+  top: 0;
+  right: 0;
+  margin-top:5px;
+  margin-right:10px;
+}
+#edge_tb td {
+  padding: 10px;
+  text-align: justify;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}

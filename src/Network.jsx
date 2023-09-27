@@ -3,7 +3,8 @@ import cytoscape from 'cytoscape';
 import popper from 'cytoscape-popper';
 import cyConfig from './cytoscapeConfig'; // Import the configuration
 import { useElementContext } from './ElementContext';
-import {nodepopper,edgepopper} from './poppers';
+import {edgepopper} from './poppers';
+import nodepopper from './NodeContent';
 import setupEventListeners from './PopEvents'
 cytoscape.use( popper );
 
@@ -13,6 +14,7 @@ function Network() {
     const {element,layoutStyle,reset,cyObj} = useElementContext()
     const cyRef = useRef(null);
 
+    // Remove the useEffect with event listener
     // useEffect just to change the layout
     // TODO: set the Layout style state in local context only.
     useEffect(()=>{
@@ -24,7 +26,7 @@ function Network() {
         name:layoutStyle
       }).run()}
 
-    },[layoutStyle])
+    },[layoutStyle]) // it list
 
     // TODO: When rest is used, ti loose the capbility to click on edge and node why?
     useEffect(() => {
@@ -41,7 +43,7 @@ function Network() {
         //NOTE: Convert the intilization part into a seprate func
         // Reinitialize popper for nodes and edges
         cyObj.current.nodes().forEach((node_element) => {
-        nodepopper(node_element);
+        nodepopper(node_element,cyObj);
         });
 
       cyObj.current.edges().forEach((edge_element) => {
@@ -86,7 +88,7 @@ function Network() {
               node_element.data('degree',degree) // stores in their object
 
                 // populating the nodeinfo
-                nodepopper(node_element)
+                nodepopper(node_element,cyObj)
 
               })
 

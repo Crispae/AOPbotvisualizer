@@ -1,3 +1,7 @@
+/** Modules handles the functionality to attach event listners for node, edge and
+ * blank space click events.
+ */
+
 export default function setupEventListeners (cyObject) {
 
     // Add Node click event
@@ -24,8 +28,6 @@ export default function setupEventListeners (cyObject) {
     // Add Edge click Event
     cyObject.on("tap","edge",(event)=>{
 
-        console.log("Edge clicked")
-
         //capture the edge
         let edge = event.target;
 
@@ -51,7 +53,6 @@ export default function setupEventListeners (cyObject) {
         let target = event.target;
 
         // Check if the target is the blank space
-
         if (target === cyObject) {
 
             // Hide all pop-ups
@@ -61,9 +62,5 @@ export default function setupEventListeners (cyObject) {
                 if (element.tippy){
                     element.tippy.hide();
                 }});}});
-
-
-
-
 
 };

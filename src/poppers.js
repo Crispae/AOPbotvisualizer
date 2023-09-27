@@ -1,60 +1,7 @@
 import tippy from 'tippy.js';
 import 'tippy.js/themes/light.css';
-import 'font-awesome/css/font-awesome.min.css';
 
 
-
-export function nodepopper(ele){
-    
-    let node_data = ele.data()
-
-    let {url,value,degree} = node_data;
-    
-    let ref = ele.popperRef(); // used for positioning
-    let node_content = document.createElement("div"); // dummy element
-    document.body.appendChild(node_content); // resolve parent null issue
-  
-  
-    // instansiating tippy element in 
-    ele.tippy = tippy(node_content,
-    
-    {
-      getReferenceClientRect: ref.getBoundingClientRect,
-      content: ()=>{
-        let content = document.createElement("div");
-        content.classList.add("node_info");
-        content.innerHTML = `
-        
-        <p align="Left"> <b>${value}</b></p>
-
-        <hr>
-            <table>
-            <tr>
-                <td align="left"><strong>Degree:</strong></td>
-                <td align="right">${degree}</td>
-            </tr>
-
-            <tr>
-                <td align="left"><strong>Identifier:</strong></td>
-                <td align="right"><a href=${url}>${value}</a></td>
-            </tr>
-
-            </table>
-
-         `
-         return content;
-    
-    },
-    trigger:"manual",
-    interactive:true,
-    hideOnClick:false,
-    arrow:false,
-    maxWidth:500,
-    theme:"light",
-    allowHTML: true,
-    zIndex: 9999,
-  
-  })}
 
 
 
@@ -105,8 +52,8 @@ function buildDiv(information)
       Evidence
       <div class="buttons">
       <!-- Thumbs-up icon -->
-      <i id="upvote" class="fa fa-thumbs-up fa-lg" style="color: #3cc48a;"></i></i>
-      <!-- Thumbs-down icon -->
+      <div padding="5px" display="flex">
+      <i id="upvote" class="fa fa-thumbs-up fa-lg" style="color: #3cc48a;"></i>
       <i id="downvote" class="fa fa-thumbs-down fa-lg" style="color: #ba051c;"></i>
       </div>
     </th>
@@ -158,7 +105,21 @@ function PopupContent(ele)
   
           // Create the div for source and target
           var headerDiv = document.createElement("div");
-          headerDiv.innerHTML = `<h3 align="Left"><strong>${source} (-) ${target}</strong></h3>`;
+          headerDiv.innerHTML = `<table>
+          <tbody>
+            <tr>
+              <td>
+                <h3><strong>${source} (-) ${target}</strong></h3>
+              </td>
+              <td style="padding: right;">
+                <div><button className='input_button' style="float: right;">Close</button></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+          
+      `;
           parentContainer.appendChild(headerDiv);
   
           // The information in loop will be feeded in the buildDiv function
@@ -194,7 +155,7 @@ export function edgepopper(ele)
             interactive: true,
             hideOnClick: false,
             theme:"light",
-            maxWidth:500,
+            maxWidth:400,
             placement: "bottom",
             
             

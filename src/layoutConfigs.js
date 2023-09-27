@@ -1,1 +1,5 @@
-// configuration of each layout
+/**
+ * For each layout configure different layout
+ * to optimize the visualization
+ * 
+ */

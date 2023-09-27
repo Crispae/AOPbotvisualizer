@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'tippy.js/dist/tippy.css'; // optional for styling
+import 'font-awesome/css/font-awesome.min.css';
 import Nav from './Nav';
 import Input from './Input';
 import Body from './Body';

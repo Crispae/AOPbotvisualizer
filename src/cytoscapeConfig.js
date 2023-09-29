@@ -18,7 +18,26 @@ style: [
                selector: 'node',
                style: 
                        {
-                           shape: "circle",
+                           shape: (ele)=>{
+
+                            if (chemical_entity.includes(ele.data('entity_type'))) 
+                               {
+                                   return 'star'; // Color for chemical nodes
+                               } 
+                                else if (gene_entity.includes(ele.data('entity_type'))) 
+                                {
+                                   return `vee`; // Color for disease nodes
+                               } 
+                               else if (disease.includes(ele.data('entity_type'))) 
+                               {
+                                   return 'round-triangle'; // Color for gene nodes
+                               } 
+                               else 
+                               {
+                                   return 'concave-hexagon'; // Default color for other nodes
+                               }
+
+                           },
                            label: 'data(value)',
                            'background-color': function (ele) 
                            { 

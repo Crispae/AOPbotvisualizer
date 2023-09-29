@@ -94,9 +94,9 @@ function searchSubmit (){
             <Row style={{height:"80px",textAlign:"left",paddingTop:"20px"}}>
             {/** In this column DropDown menu will be shifted */}
             
-            <Col >
-            <Drop setValue={setHop} buttonConfigs={buttonConfigs} dropName={"Hops"}></Drop>
-            </Col>
+              <Col >
+              <Drop setValue={setHop} buttonConfigs={buttonConfigs} dropName={"Hops"}></Drop>
+              </Col>
 
             <Col>
                 <button className="edit_button layout_button" onClick={searchSubmit} type="submit">Submit</button>

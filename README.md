@@ -21,6 +21,9 @@ npm start
 After installation, network generated from AOPbot can be visualized here.
 Test example is available in the repository.
 
+You can also explore vercel to test the tool at following link [Visualizer Tool on Vercel](https://ao-pbotvisualizer.vercel.app/)
+
+
 ## Contributing 🤝
 We actively encourage contributions from the community to make AOPbot even more robust and effective. If you encounter any issues, have suggestions, or would like to contribute to the project, please open an issue or submit a pull request. Your contributions are highly appreciated!
   

@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="logo.png" alt="AOPbot Logo" width="100">
+  <img src="public/logo.png" alt="AOPbot Logo" width="100">
   <h1>AOPbot Visualizer</h1>
 </div>
 
